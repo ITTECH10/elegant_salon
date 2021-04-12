@@ -1,5 +1,64 @@
-body {
+*, *::before, *::after {
   margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 960px
+  lg, large: 1280px
+  xl, extra-large: 1920px */
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #5E18E8;
+  --color-secondary: #000000;
+  --color-tertiary: #875CC0;
+  --color-white-1: #ffffff;
+  --color-success: #4CAF50;
+  --color-danger: #F44336;
+}
+
+/* XS 1rem = 8px */ 
+@media only screen and (min-width: 0px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* SM 1rem = 9px */ 
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* MD 1rem = 12px */ 
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* LG 1rem = 14px */ 
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 87.5%; 
+  }
+}
+
+/* LG 1rem = 18px */ 
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
