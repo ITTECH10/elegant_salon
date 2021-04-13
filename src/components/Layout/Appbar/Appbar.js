@@ -31,7 +31,7 @@ export default function MyAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar color="secondary" position="fixed" className={classes.navRoot}>
+      <AppBar color="secondary" position="static" className={classes.navRoot}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             Početna

@@ -14,6 +14,103 @@ html {
   box-sizing: border-box;
 }
 
+/*************DYNAMIC COUNTERS************* */
+@property --num {
+  syntax: '<integer>';
+  initial-value: 56000;
+  inherits: false;
+}
+
+@property --num-2 {
+  syntax: '<integer>';
+  initial-value: 1900;
+  inherits: false;
+}
+
+@property --num-3 {
+  syntax: '<integer>';
+  initial-value: 1900;
+  inherits: false;
+}
+
+@property --num-4 {
+  syntax: '<integer>';
+  initial-value: 90;
+  inherits: false;
+}
+
+.counter__count--1 {
+  animation: counter1 5s ease-in-out;
+  counter-reset: num var(--num);
+}
+
+.counter__count--1::after {
+  content: counter(num);
+}
+
+.counter__count--2 {
+  animation: counter2 5s ease-in-out;
+  counter-reset: num-2 var(--num-2);
+}
+
+.counter__count--2::after {
+  content: counter(num-2);
+}
+
+.counter__count--3 {
+  animation: counter3 5s ease-in-out;
+  counter-reset: num-3 var(--num-3);
+}
+
+.counter__count--3::after {
+  content: counter(num-3);
+}
+
+.counter__count--4 {
+  animation: counter4 5s ease-in-out;
+  counter-reset: num-4 var(--num-4);
+}
+
+.counter__count--4::after {
+  content: counter(num-4);
+}
+
+@keyframes counter1 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 56000;
+  }
+}
+
+@keyframes counter2 {
+  from {
+    --num-2: 0;
+  }
+  to {
+    --num-2: 1900;
+  }
+}
+
+@keyframes counter3 {
+  from {
+    --num-3: 0;
+  }
+  to {
+    --num-3: 45000;
+  }
+}
+
+@keyframes counter4 {
+  from {
+    --num-4: 0;
+  }
+  to {
+    --num-4: 90;
+  }
+}
+
 :root {
   --color-primary: #5E18E8;
   --color-secondary: #000000;
@@ -73,6 +170,7 @@ code {
 }
 
 .app {
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -105,4 +203,38 @@ code {
 .info__right {
   height: 100px;
   margin-left: 5rem;
+}
+
+/*************COUNTER DASHBOARD **************/
+.counter {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  top: 14rem;
+  padding: 2rem;
+}
+
+.counter__container {
+  width: 25%;
+  text-align: center;
+}
+
+.counter__circle {
+  height: 14rem;
+  width: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 10px solid #000;
+  border-radius: 50%;
+}
+
+.counter__count {
+  font-size: 3rem;
+}
+
+.counter__icon {
+  font-size: 5rem !important;
 }
