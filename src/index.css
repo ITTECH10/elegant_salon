@@ -72,6 +72,10 @@ code {
     monospace;
 }
 
+.app {
+  width: 100vw;
+}
+
 /************INFORMATIONAL DASHBOARD ****************/
 .info {
   min-height: 10rem;
