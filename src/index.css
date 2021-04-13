@@ -19,6 +19,7 @@ html {
   --color-secondary: #000000;
   --color-tertiary: #875CC0;
   --color-white-1: #ffffff;
+  --color-grey-1: #ccc;
   --color-success: #4CAF50;
   --color-danger: #F44336;
 }
@@ -69,4 +70,35 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/************INFORMATIONAL DASHBOARD ****************/
+.info {
+  min-height: 10rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.info__left {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 6rem;
+}
+
+.info__left-icon-box {
+  display: flex;
+  align-items: center;
+  color: var(--color-grey-1);
+  margin-left: 3rem;
+}
+
+.info__left-icon {
+  font-size: 3.5rem !important;
+}
+
+.info__right {
+  height: 100px;
+  margin-left: 5rem;
 }
