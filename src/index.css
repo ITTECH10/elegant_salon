@@ -29,7 +29,7 @@ html {
 
 @property --num-3 {
   syntax: '<integer>';
-  initial-value: 1900;
+  initial-value: 45000;
   inherits: false;
 }
 
