@@ -4,7 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import FacebookIcon from '@material-ui/icons/Facebook';
-
+import {Link} from 'react-router-dom'
+ 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -24,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#c62828'
     }
   },
+  linkRoot: {
+    textDecoration: 'none',
+    color: '#fff'
+  }
 }));
 
 export default function MyAppBar() {
@@ -34,16 +39,24 @@ export default function MyAppBar() {
       <AppBar color="secondary" position="static" className={classes.navRoot}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Početna
+            <Link to="/" className={classes.linkRoot}>
+              Početna
+            </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            Ponuda Vozila
+            <Link to="/ponuda" className={classes.linkRoot}>
+              Ponuda Vozila
+            </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            Profil i Povijest
+          <Link to="/povijest" className={classes.linkRoot}>
+              Profil i povijest
+            </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            Kontakt
+            <Link to="/contact" className={classes.linkRoot}>
+              Kontakt
+            </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
             <FacebookIcon />
