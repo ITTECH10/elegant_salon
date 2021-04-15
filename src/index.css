@@ -121,41 +121,6 @@ html {
   --color-danger: #F44336;
 }
 
-/* XS 1rem = 8px */ 
-@media only screen and (min-width: 0px) {
-  html {
-    font-size: 50%;
-  }
-}
-
-/* SM 1rem = 9px */ 
-@media only screen and (min-width: 600px) {
-  html {
-    font-size: 62.5%;
-  }
-}
-
-/* MD 1rem = 12px */ 
-@media only screen and (min-width: 960px) {
-  html {
-    font-size: 75%;
-  }
-}
-
-/* LG 1rem = 14px */ 
-@media only screen and (min-width: 1280px) {
-  html {
-    font-size: 87.5%; 
-  }
-}
-
-/* LG 1rem = 18px */ 
-@media only screen and (min-width: 1920px) {
-  html {
-    font-size: 112.5%;
-  }
-}
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -177,12 +142,12 @@ code {
 }
 
 /************INFORMATIONAL DASHBOARD ****************/
-.info {
+/* .info {
   min-height: 10rem;
   width: 100vw;
   display: flex;
   align-items: center;
-}
+} */
 
 .info__left {
   width: 60%;
@@ -239,4 +204,58 @@ code {
 
 .counter__icon {
   font-size: 5rem !important;
+}
+
+/* XS 1rem = 8px */ 
+@media only screen and (min-width: 0px) {
+  html {
+    font-size: 50%;
+  }
+
+  .counter {
+    display: block;
+  }
+  
+  .counter__container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* SM 1rem = 9px */ 
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
+  
+  .counter {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .counter__container {
+    width: 80%;
+    margin-bottom: 0;
+  }
+}
+
+/* MD 1rem = 12px */ 
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* LG 1rem = 14px */ 
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 87.5%; 
+  }
+}
+
+/* LG 1rem = 18px */ 
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 112.5%;
+  }
 }

@@ -3,10 +3,24 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Logo from './../../../assets/images/logo.png'
+import {makeStyles} from '@material-ui/core/styles'
+
+const useStyles = makeStyles(theme => ({
+    info: {
+        minHeight: '10rem',
+        width: '100vw',
+        display: 'none',
+        alignItems: 'center',
+        [theme.breakpoints.up('lg')]: {
+            display: 'flex'
+        }
+    }
+}))
 
 const InfoDashboard = () => {
+    const classes = useStyles()
     return (
-        <section className="info">
+        <section className={classes.info}>
             <div className="info__left">
                 <div className="info__left-icon-box">
                     <PhoneIcon className="info__left-icon"/>

@@ -4,6 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import {Link} from 'react-router-dom'
  
 const useStyles = makeStyles((theme) => ({
@@ -54,12 +56,18 @@ export default function MyAppBar() {
             </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/contact" className={classes.linkRoot}>
+            <Link to="/kontakt" className={classes.linkRoot}>
               Kontakt
             </Link>
           </Typography>
           <Typography variant="h6" className={classes.title}>
             <FacebookIcon />
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <InstagramIcon />
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <YouTubeIcon />
           </Typography>
         </Toolbar>
       </AppBar>
