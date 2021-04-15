@@ -7,7 +7,7 @@ import {makeStyles} from '@material-ui/core/styles'
 const useStyles = makeStyles(theme => ({
     gridRoot: {
         position: 'relative',
-        top: '14rem',
+        top: '10rem',
         padding: '0 1rem'
     }
 }))

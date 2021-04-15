@@ -47,8 +47,9 @@ const useStyles = makeStyles({
 });
 
 export default function Vehicle({vehicle}) {
-  const classes = useStyles();
-  const {name, price, priceWithTax, year, kilometers} = vehicle
+    const classes = useStyles();
+    // const {name, price, priceWithTax, year, kilometers} = vehicle
+    const {name} = vehicle  
 
   return (
       <Grid item xs={6} sm={4} md={3} lg={2} className={classes.itemRoot}>

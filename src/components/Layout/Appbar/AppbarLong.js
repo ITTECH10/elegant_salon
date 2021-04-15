@@ -12,7 +12,7 @@ const AppbarLong = () => {
             <Appbar />
             <Slogan title="Ti Voziš. Ti Biraš." />
             {window.location.pathname === '/ponuda' && <SearchVehicles />}
-            <SloganTitle />
+            {window.location.pathname === '/' && <SloganTitle />}
         </>
     )
 }
