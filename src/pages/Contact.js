@@ -1,8 +1,9 @@
 import React from 'react'
+import Map from './../components/Map/Map'
 import AppbarLong from '../components/Layout/Appbar/AppbarLong'
 import {Grid, Box, Typography, Divider} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
-import Map from './../assets/images/map.PNG'
+// import Map from './../assets/images/map.PNG'
 
 const useStyles = makeStyles(theme => ({
     gridContainer: {
@@ -12,7 +13,8 @@ const useStyles = makeStyles(theme => ({
     gridItemOne: {
         background: '#fff',
         borderRadius: '.5rem',
-        padding: '1rem'
+        padding: '1rem',
+        position: 'relative'
     },
     gridItemTwo: {
         background: '#fff',
@@ -53,6 +55,12 @@ const useStyles = makeStyles(theme => ({
         padding: '2rem',
         backgroundColor: '#fff',
         borderRadius: '.5rem'
+    },
+    // MAP
+    boxMap: {
+        position: 'relative',
+        height: '350px',
+        marginBottom: '1rem'
     }
 }))
 
@@ -67,7 +75,9 @@ const Contact = () => {
                         <Typography variant="h4" className={classes.gridOneTitle}>
                             Kontaktirajte nas
                         </Typography>
-                        <img src={Map} alt="map" style={{height: '400px', width: '100%'}} />
+                        <Box className={classes.boxMap}>
+                            <Map />
+                        </Box>
                             <Typography variant="h4" align="center" style={{fontWeight: 'bold'}}>
                                 Kontakt Podaci
                             </Typography>
