@@ -210,6 +210,23 @@ code {
   font-size: 5rem !important;
 }
 
+.custom__marker {
+  font-size: 1.2rem;
+  display: inline;
+  margin: 0 1.5rem;
+}
+
+.custom__marker > ::marker {
+  content: '✔';
+  color: red;
+  margin-right: 1rem;
+}
+
+.custom__marker li {
+  padding-left: .2rem;
+  margin-bottom: .5rem;
+}
+
 /* XS 1rem = 8px */ 
 @media only screen and (min-width: 0px) {
   html {

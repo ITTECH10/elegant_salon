@@ -51,9 +51,13 @@ export default function Vehicle({vehicle}) {
     // const {name, price, priceWithTax, year, kilometers} = vehicle
     const {name} = vehicle  
 
+    const handleClick = () => {
+        window.location.pathname = '/vozilo/1'
+    }
+
   return (
       <Grid item xs={6} sm={4} md={3} lg={2} className={classes.itemRoot}>
-        <Card className={classes.cardRoot}>
+        <Card className={classes.cardRoot} onClick={handleClick}>
         <CardActionArea>
             <CardMedia
                 className={classes.cardMediaRoot}
