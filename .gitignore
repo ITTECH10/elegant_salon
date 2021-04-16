@@ -6,6 +6,9 @@
 .pnp.js
 .env
 
+# CHANGE LATER
+# /src/assets/images/gallery
+
 # testing
 /coverage
 
